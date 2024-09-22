@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestosteroneHub - Viss par testosteronu</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(45deg, #6DD5FA, #4CAF50);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            transform: scale(1.1);
+        }
+
+        /* Параллакс-эффект */
+        .parallax {
+            position: relative;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            z-index: 1;
+        }
+
+        /* Дополнительные слои параллакса */
+        .parallax::before, .parallax::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .parallax::before {
+            background-image: url('https://example.com/image-layer1.jpg'); /* Замените ссылку на картинку первого слоя */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            transform: translateY(-30px);
+        }
+
+        .parallax::after {
+            background-image: url('https://example.com/image-layer2.jpg'); /* Замените ссылку на картинку второго слоя */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            transform: translateY(30px);
+        }
+
+        .parallax-1 {
+            background-image: url('https://example.com/image1.jpg'); /* Замените ссылку на свою картинку */
+        }
+
+        .parallax-2 {
+            background-image: url('https://example.com/image2.jpg'); /* Замените ссылку на свою картинку */
+        }
+
+        /* Стили секций */
+        section {
+            padding: 60px 20px;
+            margin: 40px auto;
+            max-width: 1000px;
+            background: linear-gradient(45deg, #fefcea, #f1da36);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+            line-height: 1.8;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        section h2 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section ul li {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #6DD5FA, #333);
+            color: white;
+            font-size: 1.1em;
+        }
+
+        /* Кнопка в футере */
+        footer .contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        footer .contact-btn:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            header {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 30px 10px;
+            }
+
+            nav a {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TestosteroneHub</h1>
+    <p>Viss par testosteronu – svarīgākais hormons veselībai</p>
+</header>
+
+<nav>
+    <a href="#about">Par testosteronu</a>
+    <a href="#health">Ietekme uz veselību</a>
+    <a href="#age">Testosterons un vecums</a>
+    <a href="#lifestyle">Dzīvesstils</a>
+    <a href="#therapy">Terapija un ārstēšana</a>
+</nav>
+
+<!-- Параллакс-изображение 1 с несколькими слоями -->
+<div class="parallax parallax-1"></div>
+
+<section id="about">
+    <h2>Kas ir testosterons?</h2>
+    <p>Testosterons ir galvenais vīriešu dzimumhormons, kas nelielos daudzumos ir sastopams arī sievietēm. Tas tiek ražots sēkliniekos vīriešiem un olnīcās sievietēm, kā arī virsnieru dziedzeros. Testosterons spēlē galveno lomu vīriešu reproduktīvo audu attīstībā, kā arī veicina muskuļu masas pieaugumu, kaulu blīvumu un vispārējo veselību.</p>
+</section>
+
+<!-- Параллакс-изображение 2 с несколькими слоями -->
+<div class="parallax parallax-2"></div>
+
+<section id="health">
+    <h2>Testosterona ietekme uz veselību</h2>
+    <h3>Ieguvumi:</h3>
+    <ul>
+        <li>Muskuļu masas pieaugums</li>
+        <li>Kaulu blīvuma uzturēšana</li>
+        <li>Seksuālās funkcijas uzlabošana</li>
+        <li>Enerģijas un noskaņojuma līmeņa paaugstināšana</li>
+    </ul>
+    <h3>Riski:</h3>
+    <ul>
+        <li>Paaugstināts sirds un asinsvadu slimību risks, ja testosterona līmenis ir pārāk augsts</li>
+        <li>Agresija un aizkaitināmība</li>
+        <li>Ādas problēmas, piemēram, akne</li>
+    </ul>
+</section>
+
+<div class="parallax parallax-1"></div>
+
+<section id="age">
+    <h2>Testosterons un vecums</h2>
+    <h3>Testosterons pusaudžiem</h3>
+    <p>Pusaudžu vecumā zēniem testosterons stimulē dzimumorgānu attīstību, balss izmaiņas, matu augšanu un muskuļu masas palielināšanos.</p>
+
+    <h3>Testosterons vīriešiem pēc 30 gadiem</h3>
+    <p>Pēc 30 gadu vecuma testosterona līmenis vīriešiem pakāpeniski samazinās, kas var izraisīt nogurumu, libido samazināšanos un muskuļu masas zudumu.</p>
+
+    <h3>Testosterons sievietēm</h3>
+    <p>Testosterons ir svarīgs arī sievietēm, jo tas palīdz uzturēt muskuļu tonusu, kaulu blīvumu un enerģijas līmeni.</p>
+</section>
+
+<div class="parallax parallax-2"></div>
+
+<section id="lifestyle">
+    <h2>Dzīvesstils un testosterons</h2>
+    <p>Jūsu dzīvesstils var ietekmēt testosterona līmeni. Sekojošie faktori ir svarīgi:</p>
+    <ul>
+        <li><strong>Pareizs uzturs:</strong> Bagātiniet diētu ar cinku, vitamīnu D, olbaltumvielām un veselīgiem taukiem.</li>
+        <li><strong>Regulāras fiziskās aktivitātes:</strong> Spēka treniņi un augstas intensitātes intervālu treniņi stimulē testosterona ražošanu.</li>
+        <li><strong>Pietiekams miegs:</strong> 7–9 stundas miega ir nepieciešamas optimālai testosterona līmeņa uzturēšanai.</li>
+        <li><strong>Stresa mazināšana:</strong> Hronisks stress paaugstina kortizola līmeni, kas negatīvi ietekmē testosteronu.</li>
+    </ul>
+</section>
+
+<section id="therapy">
+    <h2>Testosterona terapija un ārstēšana</h2>
+    <p>Testosterona aizstājterapija (TAT) ir ārstēšanas metode, ko lieto, lai palīdzētu vīriešiem ar zemu testosterona līmeni.</p>
+</section>
+
+<footer id="contact">
+    <p>Kontakti: artemij.kudrjavcev@gmail.com | Tālrunis: +371 20018174</p>
+    <a href="mailto:artemij.kudrjavcev@gmail.com" class="contact-btn">Rakstīt mums</a>
+    <p>&copy; 2024 TestosteroneHub. Artemijs Kudrjavcevs un Devids Goldbergs</p>
+</footer>
+
+</body>
+</html>
